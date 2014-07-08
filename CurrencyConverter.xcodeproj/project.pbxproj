@@ -12,6 +12,7 @@
 		4F54B76A1969574800174348 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F54B7691969574800174348 /* Images.xcassets */; };
 		4F54B76D1969574800174348 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F54B76B1969574800174348 /* MainMenu.xib */; };
 		4F54B7791969574800174348 /* CurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F54B7781969574800174348 /* CurrencyConverterTests.swift */; };
+		4F54B783196957CB00174348 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F54B782196957CB00174348 /* Converter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		4F54B7721969574800174348 /* CurrencyConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F54B7771969574800174348 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F54B7781969574800174348 /* CurrencyConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterTests.swift; sourceTree = "<group>"; };
+		4F54B782196957CB00174348 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				4F54B7691969574800174348 /* Images.xcassets */,
 				4F54B76B1969574800174348 /* MainMenu.xib */,
 				4F54B7631969574800174348 /* Supporting Files */,
+				4F54B782196957CB00174348 /* Converter.swift */,
 			);
 			path = CurrencyConverter;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F54B7681969574800174348 /* AppDelegate.swift in Sources */,
+				4F54B783196957CB00174348 /* Converter.swift in Sources */,
 				4F54B7661969574800174348 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
