@@ -9,10 +9,33 @@
 import Cocoa
 
 class Converter: NSObject {
-    var sourceCurrencyAmount:Float = 0.0
-    var rate:Float = 0.0
+    var dollarsToConvert = 0.0
+    var exchangeRate = 0.0
     
-    func convertCurrency() -> Float {
-        return rate * sourceCurrencyAmount
+    var amountInOtherCurrency:Double {
+        set {
+            println("can not change this value!")
+        }
+        get {
+            return dollarsToConvert * exchangeRate
+        }
+    }
+    
+    
+    override class func keyPathsForValuesAffectingValueForKey(key: String!) -> NSSet! {
+        
+        /*
+        if ([key isEqualToString:@"amountInOtherCurrency"])
+        {
+        return [NSSet setWithObjects:@"dollarsToConvert", @"exchangeRate", nil];
+        }
+        return nil;
+*/
+        
+        if (key == "amountInOtherCurrency")
+        {
+            return NSSet(objects: "dollarsToConvert","exchangeRate")
+        }
+        return nil
     }
 }

@@ -17,13 +17,7 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="E5t-Hd-baS" customClass="ConverterController" customModule="CurrencyConverter" customModuleProvider="target">
-            <connections>
-                <outlet property="amountField" destination="Tkz-6R-nnz" id="fmp-GF-NYb"/>
-                <outlet property="dollarField" destination="7Al-SI-Vvl" id="Gsr-b0-M4c"/>
-                <outlet property="rateField" destination="mQv-zu-SBc" id="m0P-IX-JzQ"/>
-            </connections>
-        </customObject>
+        <customObject id="EH4-n2-uTy" customClass="Converter" customModule="CurrencyConverter" customModuleProvider="target"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="CurrencyConverter" id="1Xt-HY-uBw">
@@ -692,6 +686,7 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
+                            <binding destination="I96-Ai-Qbv" name="value" keyPath="selection.dollarsToConvert" id="yXj-CH-4EE"/>
                             <outlet property="nextKeyView" destination="Tkz-6R-nnz" id="zQV-f6-Kja"/>
                         </connections>
                     </textField>
@@ -703,22 +698,10 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
+                            <binding destination="I96-Ai-Qbv" name="value" keyPath="selection.amountInOtherCurrency" id="vqj-qT-Ph3"/>
                             <outlet property="nextKeyView" destination="mQv-zu-SBc" id="1J5-pS-N9I"/>
                         </connections>
                     </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xzi-9z-oIC">
-                        <rect key="frame" x="355" y="26" width="105" height="19"/>
-                        <buttonCell key="cell" type="roundRect" title="Convert" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oP3-2H-unf">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="cellTitle"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                        </buttonCell>
-                        <connections>
-                            <action selector="convert:" target="E5t-Hd-baS" id="bCp-YE-415"/>
-                        </connections>
-                    </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ed0-BF-Roq">
                         <rect key="frame" x="36" y="157" width="184" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Excehnge Rate Per $1:" id="Bsv-YH-Xet">
@@ -751,6 +734,7 @@ DQ
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
+                            <binding destination="I96-Ai-Qbv" name="value" keyPath="selection.exchangeRate" id="qYm-G5-4dA"/>
                             <outlet property="nextKeyView" destination="7Al-SI-Vvl" id="bwK-Jj-5YP"/>
                         </connections>
                     </textField>
@@ -761,5 +745,15 @@ DQ
             </connections>
             <point key="canvasLocation" x="435.5" y="308"/>
         </window>
+        <objectController id="I96-Ai-Qbv">
+            <declaredKeys>
+                <string>dollarsToConvert</string>
+                <string>exchangeRate</string>
+                <string>amountInOtherCurrency</string>
+            </declaredKeys>
+            <connections>
+                <outlet property="content" destination="EH4-n2-uTy" id="RSb-3c-rXJ"/>
+            </connections>
+        </objectController>
     </objects>
 </document>

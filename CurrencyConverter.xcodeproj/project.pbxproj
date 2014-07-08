@@ -13,7 +13,6 @@
 		4F54B76D1969574800174348 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F54B76B1969574800174348 /* MainMenu.xib */; };
 		4F54B7791969574800174348 /* CurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F54B7781969574800174348 /* CurrencyConverterTests.swift */; };
 		4F54B783196957CB00174348 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F54B782196957CB00174348 /* Converter.swift */; };
-		4FF1A94C196BC4E800A5AE29 /* ConverterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF1A94B196BC4E800A5AE29 /* ConverterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +36,6 @@
 		4F54B7771969574800174348 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F54B7781969574800174348 /* CurrencyConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterTests.swift; sourceTree = "<group>"; };
 		4F54B782196957CB00174348 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
-		4FF1A94B196BC4E800A5AE29 /* ConverterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +82,6 @@
 				4F54B76B1969574800174348 /* MainMenu.xib */,
 				4F54B7631969574800174348 /* Supporting Files */,
 				4F54B782196957CB00174348 /* Converter.swift */,
-				4FF1A94B196BC4E800A5AE29 /* ConverterController.swift */,
 			);
 			path = CurrencyConverter;
 			sourceTree = "<group>";
@@ -214,7 +211,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FF1A94C196BC4E800A5AE29 /* ConverterController.swift in Sources */,
 				4F54B7681969574800174348 /* AppDelegate.swift in Sources */,
 				4F54B783196957CB00174348 /* Converter.swift in Sources */,
 				4F54B7661969574800174348 /* main.swift in Sources */,
