@@ -14,7 +14,7 @@ class Converter: NSObject {
     
     var amountInOtherCurrency:Double {
         set {
-            println("can not change this value!")
+            dollarsToConvert =  newValue/exchangeRate
         }
         get {
             return dollarsToConvert * exchangeRate
@@ -23,15 +23,7 @@ class Converter: NSObject {
     
     
     override class func keyPathsForValuesAffectingValueForKey(key: String!) -> NSSet! {
-        
-        /*
-        if ([key isEqualToString:@"amountInOtherCurrency"])
-        {
-        return [NSSet setWithObjects:@"dollarsToConvert", @"exchangeRate", nil];
-        }
-        return nil;
-*/
-        
+                
         if (key == "amountInOtherCurrency")
         {
             return NSSet(objects: "dollarsToConvert","exchangeRate")
