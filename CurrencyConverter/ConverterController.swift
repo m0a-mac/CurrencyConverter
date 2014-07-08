@@ -12,7 +12,13 @@ class ConverterController: NSObject {
     @IBOutlet var rateField: NSTextField
     @IBOutlet var dollarField: NSTextField
     @IBOutlet var amountField: NSTextField
+
     @IBAction func convert(sender: AnyObject) {
-        println("run convert")
+        var amount:Float = 0.0
+        var converter = Converter()
+        converter.sourceCurrencyAmount = dollarField.floatValue
+        converter.rate = rateField.floatValue
+        amount = converter.convertCurrency()
+        amountField.floatValue = amount
     }
 }
