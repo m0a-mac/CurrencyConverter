@@ -9,12 +9,32 @@
 import Cocoa
 
 class Converter: NSObject {
-    var dollarsToConvert = 0.0
-    var exchangeRate = 0.0
+    var _dollarsToConvert=0.0;
+    var dollarsToConvert : Double {
+        set {
+            _dollarsToConvert=newValue;
+            self.arrayController.addObject(["dollars":dollarsToConvert, "rate":exchangeRate,"amount":amountInOtherCurrency]);
+        }
+        get {
+            return _dollarsToConvert;
+        }
+    }
+    var _exchangeRate = 0.0;
+    var exchangeRate:Double{
+        set {
+            _exchangeRate = newValue;
+            self.arrayController.addObject(["dollars":dollarsToConvert, "rate":exchangeRate,"amount":amountInOtherCurrency]);
+        }
+    get {
+        return _exchangeRate;
+    }
+    }
+    @IBOutlet var arrayController: NSArrayController
     
     var amountInOtherCurrency:Double {
         set {
-            dollarsToConvert =  newValue/exchangeRate
+            dollarsToConvert =  newValue/exchangeRate;
+            self.arrayController.addObject(["dollars":dollarsToConvert, "rate":exchangeRate,"amount":amountInOtherCurrency]);
         }
         get {
             return dollarsToConvert * exchangeRate
